@@ -25,14 +25,14 @@ unset($_SESSION['register_error']);
 
     <header class="header">
         <div class="logo">
-        <a href="index.html">
+        <a href="index.php">
             <img src="./components/images/лого.png" alt="IT-Куб Находка">
         </a>
         </div>
         <nav class="nav">
-            <a href="info.html">О нас</a>
-            <a href="contacts.html">Контакты</a>
-            <a href="resources.html">Ресурсы</a>
+            <a href="info.php">О нас</a>
+            <a href="contacts.php">Контакты</a>
+            <a href="resources.php">Ресурсы</a>
             <?php if (isset($_SESSION['user_id'])): ?>
             <!-- Показываем только залогиненным -->
             <?php if ($_SESSION['role'] === 'admin'): ?>
