@@ -17,7 +17,7 @@ unset($_SESSION['register_error']);
   <title>IT-Куб Находка</title>
   <link rel="stylesheet" href="./styles/main-styles.css">
   <link rel="stylesheet" href="./styles/logIn-styles.css">
-</hea>
+</head>
 <body>
 
   <!-- Шапка -->
@@ -57,7 +57,7 @@ unset($_SESSION['register_error']);
                 
                 <?php if ($register_error): ?>
                     <div class="error-message">
-                        <?php echo htmlspecialchars($register_error); ?>
+                        <p style='color: #d32f2f;background: #ffebee;'><?php echo htmlspecialchars($register_error); ?></p>
                     </div>
                 <?php endif; ?>
 
@@ -93,7 +93,7 @@ unset($_SESSION['register_error']);
 
                 <?php if ($login_error): ?>
                     <div class="error-message">
-                        <?php echo htmlspecialchars($login_error); ?>
+                        <p style='color: #d32f2f;background: #ffebee;'><?php echo htmlspecialchars($login_error); ?></p>
                     </div>
                 <?php endif; ?>
 

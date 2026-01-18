@@ -9,7 +9,7 @@ require 'config.php';  // Подключаем БД
   <title>IT-Куб Находка</title>
   <link rel="stylesheet" href="./styles/main-styles.css">
   <link rel="stylesheet" href="./styles/resources-styles.css">
-</hea>
+</head>
 <body>
 
   <!-- Шапка -->
