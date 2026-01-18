@@ -1,3 +1,14 @@
+<?php
+require 'config.php';  // Подключаем БД
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('Location: logIn.html');
+    exit;
+}
+$stmt = $pdo->prepare('SELECT full_name, role FROM users WHERE id = ?');
+$stmt->execute([$_SESSION['user_id']]);
+$current_user = $stmt->fetch();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -12,18 +23,28 @@
   <!-- Шапка -->
     <header class="header">
         <div class="logo">
-        <a href="index.html">
+        <a href="index.php">
         <img src="./components/images/лого.png" alt="IT-Куб Находка">
         </a>
         </div>
         <nav class="nav">
-        <a href="info.html">О нас</a>
-        <a href="contacts.html">Контакты</a>
-        <a href="resources.html">Ресурсы</a>
+        <a href="info.php">О нас</a>
+        <a href="contacts.php">Контакты</a>
+        <a href="resources.php">Ресурсы</a>
+        <?php if (isset($_SESSION['user_id'])): ?>
+        <!-- Показываем только залогиненным -->
+        <?php if ($_SESSION['role'] === 'admin'): ?>
+            <a href="admin.php">Админка</a>
+        <?php else: ?>
+            <a href="user.php">Профиль</a>
+        <?php endif; ?>
+        <a href="logout.php">Выйти</a>
+        <?php else: ?>
+            <!-- Показываем только незалогиненным -->
+            <a href="logInto.php">Войти</a>
+        <?php endif; ?>
         </nav>
-        <a href="index.html">
-        <button class="btn-logout">Выйти</button>
-        </a>
+
     </header>
 
     
@@ -33,8 +54,10 @@
             <div class="profile">
             <img src="./components/images/profile.png" alt="Аватар">
             <div class="profile-info">
-                <p>ФИО: ___</p>
-                <p>Класс: ___</p>
+                <h2>Добро пожаловать, <?php echo htmlspecialchars($current_user['full_name']); ?>!</h2>
+                <?php if ($current_user['role'] === 'admin'): ?>
+                    <p>(Администратор)</p>
+                <?php endif; ?>
             </div>
             </div>
 

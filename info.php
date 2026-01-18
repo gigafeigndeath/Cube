@@ -1,3 +1,6 @@
+<?php
+require 'config.php';  // Подключаем БД
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -12,18 +15,28 @@
   <!-- Шапка -->
   <header class="header">
     <div class="logo">
-      <a href="index.html">
+      <a href="index.php">
       <img src="./components/images/лого.png" alt="IT-Куб Находка">
       </a>
     </div>
     <nav class="nav">
-      <a href="info.html">О нас</a>
-      <a href="contacts.html">Контакты</a>
-      <a href="resources.html">Ресурсы</a>
+      <a href="info.php">О нас</a>
+      <a href="contacts.php">Контакты</a>
+      <a href="resources.php">Ресурсы</a>
+        <?php if (isset($_SESSION['user_id'])): ?>
+        <!-- Показываем только залогиненным -->
+        <?php if ($_SESSION['role'] === 'admin'): ?>
+            <a href="admin.php">Админка</a>
+        <?php else: ?>
+            <a href="user.php">Профиль</a>
+        <?php endif; ?>
+        <a href="logout.php">Выйти</a>
+        <?php else: ?>
+            <!-- Показываем только незалогиненным -->
+            <a href="logInto.php">Войти</a>
+        <?php endif; ?>
     </nav>
-    <a href="logIn.html">
-    <button class="btn-login">Вход</button>
-    </a>
+    
   </header>
 
     <div class="intro">
