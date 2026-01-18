@@ -1,0 +1,66 @@
+@media (max-width: 1024px) {
+  .contacts-section {
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts-block {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  .contact-info {
+    font-size: 20px;
+  }
+}
+.wrap {
+  position:fixed; 
+  width: 100%;   
+  height: 100%;  
+  display: flex; 
+  flex-direction: column; 
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1; 
+}
+
+.docs {
+  max-width: 1000px;
+  padding: 20px 0px 0px 20px;
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 13%;
+  bottom: 0;
+}
+
+.docs-block {
+  margin-bottom: 25px;
+}
+
+.docs-block h3 {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 3px;
+}
+
+.docs-block ul {
+  margin: 10px 0 0 20px;
+  padding: 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.docs-block li {
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: bold;
+}
