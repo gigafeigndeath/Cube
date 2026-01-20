@@ -61,7 +61,7 @@ require 'config.php';  // Подключаем БД
                 <img src="./components/images/vk.png" alt="VK">
             </a>
             <a href="https://wa.me/79242402287" target="_blank">
-                <img src="./components/images/whatsa.png" alt="WhatsApp">
+                <img src="./components/images/telegram.png" alt="telegram">
             </a>
             </div>
         </div>
