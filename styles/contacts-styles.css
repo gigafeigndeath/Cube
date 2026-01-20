@@ -81,6 +81,7 @@ main {
   transition: transform 0.3s;
   height: 12vh;
   width: 12vh;
+  border-radius: 20%;
 }
 
 .social-links img:hover {
