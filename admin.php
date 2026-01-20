@@ -40,7 +40,7 @@ $current_user = $stmt->fetch();
         <?php if (isset($_SESSION['user_id'])): ?>
         <!-- Показываем только залогиненным -->
         <?php if ($_SESSION['role'] === 'admin'): ?>
-            <a href="admin.php">Админка</a>
+            <a href="admin.php">Админ панель</a>
         <?php else: ?>
             <a href="user.php">Профиль</a>
         <?php endif; ?>
