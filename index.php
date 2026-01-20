@@ -8,6 +8,7 @@ require 'config.php';  // Подключаем БД
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IT-Куб Находка</title>
   <link rel="stylesheet" href="./styles/main-styles.css">
+  <link rel="icon" type="image/x-icon" href="./components/images/лого.png">
 </head>
 <body>
 

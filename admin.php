@@ -22,6 +22,7 @@ $current_user = $stmt->fetch();
   <title>IT-Куб Находка</title>
   <link rel="stylesheet" href="./styles/main-styles.css">
   <link rel="stylesheet" href="./styles/admin-styles.css">
+  <link rel="icon" type="image/x-icon" href="./components/images/лого.png">
 </head>
 <body>
 <div class="wrap">
