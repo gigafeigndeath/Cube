@@ -2,9 +2,9 @@
 session_start();  // Запускаем сессию на всех страницах
 
 $host = 'localhost';
-$db   = 'itcube_db';  
-$user = 'root';       
-$pass = '';           
+$db   = 'ck261205_itcube';  
+$user = 'ck261205_itcube';       
+$pass = '4akAMqFD';           
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";

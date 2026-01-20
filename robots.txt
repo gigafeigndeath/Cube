@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin.php
+Disallow: /config.php
+Disallow: /logout.php
+Disallow: /logInto.php
+Sitemap: https://ck261205.tw1.ru/sitemap.xml
